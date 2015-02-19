@@ -9,6 +9,7 @@ using namespace std;
 //Suma a (dado) y b (dado) y almacena el resultado en la direccion de memoria donde apunta resultado (dado)
 void sumar(int a, int b, int *resultado)
 {
+
   *resultado=a+b;
 
 }
@@ -23,12 +24,17 @@ T getMax(T*arreglo, int tamano)
 //Definicion del factorial https://en.wikipedia.org/wiki/Factorial
 int factorial(int num)
 {
-    int fact=1;
-   for(int i=0; i<=num; i++)
+int fact=1;
+    if(num!=0)
     {
-        cout<<fact;
-        return fact = fact * i;
-    }
+
+        for(int i=1;i<=num;i++)
+        {
+            fact*=i;
+        }
+        return fact;
+    }else if(num==0)
+        return 1;
 
 }
 
